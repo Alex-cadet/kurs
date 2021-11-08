@@ -7,6 +7,7 @@
     <title>Погода в регионе</title>
 </head>
 <body bgcolor="#6fd629">
-    <h1>Курсовая работа</h1>
+    <h1 style="color:black;text-align:center">Курсовая работа</h1>
+    <h2 style="color:cyan;text-align:center";">Погода</h2>
 </body>
 </html>
