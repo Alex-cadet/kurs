@@ -64,7 +64,7 @@
  <div class="crud">
      <div class="button">
          <h3>C</h3>
-         <button id=b1>Create</button>
+         <button id=b1 onclick="window.location.href='create'">Create</button>
      </div>
      <div class="button">
         <h3>R</h3>

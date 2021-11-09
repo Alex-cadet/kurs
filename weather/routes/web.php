@@ -17,3 +17,6 @@ Route::get('/', function () {
 Route::get('/sel', function () {
     return view('sel');
 });
+Route::get('create', function () {
+    return view('create');
+});
