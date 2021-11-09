@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Погода в регионе</title>
 </head>
-<body bgcolor="#6fd629">
+<body bgcolor="#89AC76">
     <h1 style="color:black;text-align:center">Курсовая работа</h1>
-    <h2 style="color:cyan;text-align:center";">Погода</h2>
+    <h2 style="color:#400080;text-align:center";">Погода в регионах</h2>
     <button onclick="window.location.href='sel'" style="color:red;margin:auto;
     display:block;background-color:yellow;top:50%"">Открыть</button>
 <div class="wrapper">
@@ -60,13 +60,38 @@
     ?>    
     </select>
     </div>
+    </div>
+ <div class="crud">
+     <div class="button">
+         <h3>C</h3>
+         <button id=b1>Create</button>
+     </div>
+     <div class="button">
+        <h3>R</h3>
+        <button id=b2>Read</button>
+     </div>
+     <div class="button">
+        <h3>U</h3>
+        <button id=b3>Update</button>
+     </div>
+     <div class="button">
+        <h3>D</h3>
+        <button id=b4>Delete</button>
+     </div>
+ </div>  
 <style>
-    .wrapper{text-align: center; /*располагаем содержимое блока по центру*/}
-    .box {display: inline-block; /*располагаем блоки в ряд по горизонтали*/
-          margin-right: 1.25em; /*убираем правый отступ между блоками*/
-}
+    .wrapper{text-align: center;margin-top: 10px;}
+    .box {
+        display: inline-block; /*располагаем блоки в ряд по горизонтали*/
+        margin-right: 1.25em;
+         }
+    .crud{text-align: center;margin-top: 50px;}
+    .button{display: inline-block; margin-right: 1.25em;}
+    #b1{background-color: green}
+    #b2{background-color: blue}
+    #b3{background-color: yellow}
+    #b4{background-color: red}
 </style>
-</div>
-    
+ 
 </body>
 </html>
