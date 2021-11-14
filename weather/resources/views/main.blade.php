@@ -68,7 +68,7 @@
      </div>
      <div class="button">
         <h3>R</h3>
-        <button id=b2>Read</button>
+        <button id=b2 onclick="window.location.href='raed'">Read</button>
      </div>
      <div class="button">
         <h3>U</h3>

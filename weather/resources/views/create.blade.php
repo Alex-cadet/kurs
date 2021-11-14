@@ -12,10 +12,12 @@
     </div>
     <div class="form">
     <form method="POST" action="">
+        <input name="id" type="text" placeholder="id">
         <input name="adults" type="text" placeholder="Взрослые">
         <input name="child" type="text" placeholder="Дети">
         <input name="pensioners" type="text" placeholder="Пенсионеры">
         <input type="submit" value="Добавить">
+        @csrf
     </form>
     </div>    
     <style>
@@ -23,5 +25,6 @@
         .body{background-color: #bda202;}
         .form{margin-top: 50px;}
     </style>
+ 
 </body>
 </html>
