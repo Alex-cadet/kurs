@@ -25,13 +25,6 @@ Route::post('create', function (Request $req) {
     $pensioners = $req->input('pensioners');
     DB::insert('insert into composition_of_population (ID,child,adults,pensioners)values(?,?,?,?)',
     [$br,$child,$adults,$pensioners]);
-    $users = DB::table('composition_of_population')
-            ->get();
-            foreach ($users as $user) {
-                echo'<table border="1">';
-                echo "<tr>".$user->ID.' '.$user->child.' '.$user->adults.' '.$user->pensioners."</tr>";
-                echo "</table>";
-            }
     return view('create');
 });
 Route::get('create', function () {
