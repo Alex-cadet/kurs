@@ -8,10 +8,11 @@
 </head>
 <body class="body">
     <div class="main">
-        <a href="/">На главную</a>
+        <a href="/">←На главную</a>
     </div>
     <div class="form">
     <form method="POST" action="">
+        <h3 style="color:black;text-align:center">Состав населения</h3>
         <input name="id" type="text" placeholder="id">
         <input name="adults" type="text" placeholder="Взрослые">
         <input name="child" type="text" placeholder="Дети">
@@ -19,12 +20,12 @@
         <input type="submit" value="Добавить">
         @csrf
     </form>
-    </div>    
+    </div>
     <style>
         .main{text-align: left;}
         .body{background-color: #bda202;}
         .form{margin-top: 50px;}
     </style>
- 
+
 </body>
 </html>

@@ -10,8 +10,9 @@
     <div class="main">
         <a href="/">На главную</a>
     </div>
+    <h3 style="color:black;text-align:center">Состав населения (таблица)</h3>
     <table border="2" align="center">
-        <tr bgcolor=yellow><td>id</td>
+        <tr bgcolor=yellow><td> id </td>
         <td>Дети</td>
         <td>Взрослые</td>
         <td>Пенсионеры</td></tr>
