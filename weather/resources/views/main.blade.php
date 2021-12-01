@@ -23,19 +23,7 @@
             }
     ?>    
     </select>
-    </div>
-
-    <div class="box">
-    <select name="" id="" size=1>
-    <?php
-    $users = DB::table('age_category')
-            ->get();
-            foreach ($users as $user) {
-                echo "<option>$user->age_category</option>";   
-            }
-    ?>    
-    </select>
-    </div>
+    </div>    
 
     <div class="box">
     <select name="" id="" size=1>
