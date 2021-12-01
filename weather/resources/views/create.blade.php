@@ -12,6 +12,7 @@
     </div>
     <div class="form">
     <form method="POST" action="">
+{{-- Состав населения --}}
         <h3 style="color:black;text-align:center">Состав населения</h3>
         <input name="id" type="text" placeholder="id">
         <input name="adults" type="text" placeholder="Взрослые">
@@ -21,14 +22,14 @@
         @csrf
     </form>
     </div>
-
+{{-- Погода --}}
     <div class="form">
         <form method="POST" action="">
             <h3 style="color:black;text-align:center">Погода</h3>
-            <input name="id" type="text" placeholder="id">
-            <input name="adults" type="text" placeholder="Температура">
+            <input name="id_weather" type="text" placeholder="id">
+            <input name="temperature" type="text" placeholder="Температура">
             
-            
+            {{-- wind --}}
             
             <div class="box">
                 <select name="wind" id="" size=1>
@@ -41,7 +42,7 @@
                 ?>    
                 </select>
             </div>
-
+            {{-- precipitation --}}
                 <div class="box">
                     <select name="precipitation" id="" size=1>
                     <?php
@@ -53,7 +54,7 @@
                     ?>    
                     </select>
                 </div>
-
+            {{-- atmospheric_pressure --}}
                 <div class="box">
                     <select name="atmospheric_pressure" id="" size=1>
                     <?php
@@ -65,7 +66,7 @@
                     ?>    
                     </select>
                 </div>
-
+            {{-- region --}}
                 <div class="box">
                     <select name="region" id="" size=1>
                     <?php
@@ -77,7 +78,7 @@
                     ?>    
                     </select>
                 </div>
-
+            {{-- cloudiness --}}
                 <div class="box">
                     <select name="cloudiness" id="" size=1>
                     <?php
