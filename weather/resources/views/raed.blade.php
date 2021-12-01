@@ -59,14 +59,14 @@ $users = DB::table('composition_of_population')
     padding: 7px;
     margin: 0 -5px -1px 0;
     text-align: center;
-    color: #666666;
+    color: hsl(0, 75%, 36%);
     border: 1px solid #C0C0C0;
-    background: #E0E0E0;
+    background: rgb(128, 118, 216);
     cursor: pointer;}
     .tabs>div {
     display: none;
     padding: 12px;
-    border: 1px solid #C0C0C0;
+    border: 1px solid hsl(32, 78%, 47%);
     background: #FFFFFF;
 }
     #tab_1:checked ~ #txt_1,
