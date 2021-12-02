@@ -67,6 +67,13 @@
         <button id=b4>Delete</button>
      </div>
  </div>  
+<?php
+use App\Models\region;
+$tyu=region::all();
+foreach ($tyu as $qaz) {
+    echo $qaz->name."<br>";
+}
+?>
 <style>
     .wrapper{text-align: center;margin-top: 10px;}
     .box {
@@ -80,6 +87,5 @@
     #b3{background-color: yellow}
     #b4{background-color: red}
 </style>
- 
 </body>
 </html>
