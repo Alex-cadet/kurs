@@ -56,24 +56,18 @@
      </div>
      <div class="button">
         <h3>R</h3>
-        <button id=b2 onclick="window.location.href='raed'">Read</button>
+        <button id=b2 onclick="window.location.href='read'">Read</button>
      </div>
      <div class="button">
         <h3>U</h3>
-        <button id=b3>Update</button>
+        <button id=b3 onclick="window.location.href='update'"">Update</button>
      </div>
      <div class="button">
         <h3>D</h3>
-        <button id=b4>Delete</button>
+        <button id=b4 onclick="window.location.href='delete'">Delete</button>
      </div>
  </div>  
-<?php
-use App\Models\region;
-$tyu=region::all();
-foreach ($tyu as $qaz) {
-    echo $qaz->name."<br>";
-}
-?>
+
 <style>
     .wrapper{text-align: center;margin-top: 10px;}
     .box {
@@ -82,8 +76,8 @@ foreach ($tyu as $qaz) {
          }
     .crud{text-align: center;margin-top: 50px;}
     .button{display: inline-block; margin-right: 1.25em;}
-    #b1{background-color: green}
-    #b2{background-color: blue}
+    #b1{background-color: #008000}
+    #b2{background-color: #0000ff}
     #b3{background-color: yellow}
     #b4{background-color: red}
 </style>

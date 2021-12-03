@@ -10,6 +10,7 @@
     <div class="main">
         <a href="/">←На главную</a>
     </div>
+    <H1 style="color:black;text-align:center">Создание</H1>
     <div class="form">
     <form method="POST" action="">
 {{-- Состав населения --}}
@@ -98,7 +99,7 @@
 
     <style>
         .main{text-align: left;}
-        .body{background-color: #bda202;}
+        .body{background-color: #008000;}
         .form{margin-top: 50px;}
         .box {
         display: inline-block; /*располагаем блоки в ряд по горизонтали*/

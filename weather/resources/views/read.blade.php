@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body style="background:#0000ff">
     <div class="main">
         <a href="/">На главную</a>
     </div>
+    <H1 style="color:black;text-align:center">Чтение</H1>
     <div class="tabs">
     <input type="radio" name="inset" value="" id="tab_1" checked>
     <label for="tab_1">Состав населения</label>
