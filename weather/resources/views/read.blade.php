@@ -21,7 +21,7 @@
     <label for="tab_3">Вкладка №3</label>
 
     <input type="radio" name="inset" value="" id="tab_4">
-    <label for="tab_4">Вкладка №4</label>
+    <label for="tab_4">Запросы</label>
     <div id="txt_1">
     <h3 style="color:black;text-align:center">Состав населения (таблица)</h3>
     <table border="2" align="center">
@@ -45,6 +45,26 @@ $users = DB::table('composition_of_population')
 ?>
 </table>
     </div>
+    {{-- Запрос --}}
+    
+    <div id="txt_4">
+        
+        <div>
+        <label for="">Вывести регионы, где температура ниже нуля</label>
+        <button onclick="(document.getElementById('reg').style.display='block')">Показать</button>
+        <button onclick="(document.getElementById('reg').style.display='none')">Скрыть</button>
+        <div></div>
+        <div id="reg">
+            <table border=1>
+                <tr><td style="background-color: #0e41f1; font-size: 24px;">Регион</td>
+                    <td style="background-color: #0e41f1; font-size: 24px;">Температура</td>
+                @foreach ($minus as $min)
+                <tr><td>{{ $min->name}}</td><td>{{$min->temperature}}</tr>        
+                @endforeach   
+            </table>
+        </div>     
+        </div>        
+    </div>   
 </div>
 <style>
     .tabs { width: 100%; padding: 0px; margin: 0 auto; }
@@ -68,12 +88,14 @@ $users = DB::table('composition_of_population')
     display: none;
     padding: 12px;
     border: 1px solid hsl(32, 78%, 47%);
-    background: #FFFFFF;
-}
-    #tab_1:checked ~ #txt_1,
-    #tab_2:checked ~ #txt_2,
+    background: #FFFFFF;}    
+#tab_1:checked ~ #txt_1,
+#tab_2:checked ~ #txt_2,
 #tab_3:checked ~ #txt_3,
 #tab_4:checked ~ #txt_4 { display: block; }
+#reg{
+    display: none;
+    margin-top: 20px;}
 </style>
 </body>
 </html>

@@ -7,4 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class weather extends Model
 {
     protected $table = 'weather';
+
+    
 }

@@ -44,7 +44,7 @@
     use App\Models\region;
     foreach (region::all() as $reg)
     {
-        echo "<font color='red'>".$reg->id."</font>"." ".$reg->name ." ".$reg->type_of_region."<br>";
+        echo "<font color='white'>".$reg->id."</font>"." ".$reg->name ." ".$reg->type_of_region."<br>";
     }
     ?> 
     </div>

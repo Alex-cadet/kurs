@@ -9,46 +9,8 @@
 <body bgcolor="#89AC76">
     <h1 style="color:black;text-align:center">Курсовая работа</h1>
     <h2 style="color:#400080;text-align:center";">Погода в регионах</h2>
-    <button onclick="window.location.href='sel'" style="color:red;margin:auto;
-    display:block;background-color:yellow;top:50%"">Открыть</button>
-<div class="wrapper">
-    <div class="box">
-    <select name="" id="" size=1>
-    <?php
-    use Illuminate\Support\Facades\DB;
-    $users = DB::table('precipitation')
-            ->get();
-            foreach ($users as $user) {
-                echo "<option>$user->precipitation</option>";   
-            }
-    ?>    
-    </select>
-    </div>    
+    
 
-    <div class="box">
-    <select name="" id="" size=1>
-    <?php
-    $users = DB::table('air_pollution_class')
-            ->get();
-            foreach ($users as $user) {
-                echo "<option>$user->air_pollution_class</option>";   
-            }
-    ?>    
-    </select>
-    </div>
-
-    <div class="box">
-    <select name="" id="" size=1>
-    <?php
-    $users = DB::table('atmospheric_pressure')
-            ->get();
-            foreach ($users as $user) {
-                echo "<option>$user->atmospheric_pressure</option>";   
-            }
-    ?>    
-    </select>
-    </div>
-    </div>
  <div class="crud">
      <div class="button">
          <h3>C</h3>

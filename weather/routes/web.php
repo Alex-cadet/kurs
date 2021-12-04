@@ -11,6 +11,7 @@
 |
 */
 
+use App\Http\Controllers\readcontroller;
 use App\Http\Controllers\clearController;
 use App\Http\Controllers\updateController;
 use Illuminate\Support\Facades\DB;
@@ -18,9 +19,7 @@ use Illuminate\Http\Request;
 Route::get('/', function () {
     return view('main');
 });
-Route::get('/sel', function () {
-    return view('sel');
-});
+
 //Состав
 Route::post('create', function (Request $req) {
     $br = $req->input('id');
@@ -43,16 +42,14 @@ Route::post('create', function (Request $req) {
     $date = $req->input('date');
     DB::insert('insert into weather (PK,temperature,wind,precipitation,atmospheric_pressure,region_id,
     cloudiness,date)values(?,?,?,?,?,?,?,?)',
-    [$id_weather,$temperature,$wind,$precipitation,$atmospheric_pressure,$region,$cloudiness,$date]);
+    [$id_weather,$temperature,$wind,$precipitation,$atmospheric_pressure,$region,$cloudiness,$date]);    
     return view('create');
 });
 
 Route::get('create', function () {
     return view('create');
 });
-Route::get('read', function () {
-    return view('read');
-});
+Route::get('read', [readcontroller::class,'selMinus']);
 
 Route::get('delete', [clearController::class,'showWeather']);
 
