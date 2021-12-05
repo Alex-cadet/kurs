@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-<body style="background:#8d8401e8">
-    <div class="main">
-        <a href="/">На главную</a>
-    </div>
+<body style="background:#8d8401e8">    
+    @extends('layout_but')
+    @section('butt')
+        
     <H1 style="color:black;text-align:center">Внесение изменений в запись</H1>
     <form action="" method="POST">
         <label for="">Поменять у региона</label>
@@ -48,6 +48,7 @@
     }
     ?> 
     </div>
+    
     <style>
         .box {
         display: inline-block; /*располагаем блоки в ряд по горизонтали*/
@@ -55,5 +56,6 @@
          }
          .region{margin-top: 50px;}
     </style>
+@endsection 
 </body>
 </html>

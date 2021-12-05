@@ -6,10 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body class="body">
-    <div class="main">
-        <a href="/" class="button">←На главную</a>
-    </div>
+<body class="body">    
     <div></div>
         @yield('mian_create')   
             @if($errors->any())
@@ -25,7 +22,7 @@
     <style>
         .main{text-align: left;vertical-align: top;color: #e6280f}
         .body{
-            background-color: #008000;
+            background-color: #108a10f8;
         }
         .form{margin-top: 50px;}
         .box {

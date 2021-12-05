@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body style="background:#0000ff" >
-    <div class="main">
-        <a href="/">На главную</a>
-    </div>
+<body style="background:#30309b" >    
+    @extends('layout_but')
+    @section('butt')
+        
     <H1 style="color:black;text-align:center">Выборка данных</H1>
     <div class="tabs">
     <input type="radio" name="inset" value="" id="tab_1" checked>
@@ -27,10 +27,12 @@
 
                                     {{--1 Возрастной состав региона --}}
     <div class="txt_1" id="t1">
-        <h4 style="color:black;text-align:left; ">1</h3>
-        <h3 style="color:black;text-align:center; background-color: cadetblue; width:250px">Возрастной состав региона</h3>
-        <button class="open"  onclick="(document.getElementById('tab1').style.display='block')">Открыть</button>
-        <button class="close" onclick="(document.getElementById('tab1').style.display='none')">Закрыть</button>
+        <h4 style="color:black;text-align:left; ">1</h2>
+        <h2 style="color:black;text-align:center; background-color: #80ff00; width:350px;">
+            Возрастной состав региона</h2>
+        <button onclick="(document.getElementById('tab1').style.display='block')"class="custom-btn btn-12"><span>Таблицу</span><span>Открой</span></button>
+        <button onclick="(document.getElementById('tab1').style.display='none')"class="custom-btn btn-12" id="close"><span>Таблицу</span><span>Закрой</span></button>
+
         <div id="tab1">
             <table border="2" align="center" style="background-color: cadetblue">
                 <tr bgcolor=yellow><td> id </td>
@@ -56,8 +58,8 @@
                                                 {{--2 Население --}}
 
     <div class="txt_1" id="t2">
-        <h4 style="color:black;text-align:left">2</h3>
-        <h3 style="color:black;text-align:center; background-color: cadetblue; width:150px">Население</h3>
+        <h4 style="color:black;text-align:left">2</h2>
+        <h2 style="color:black;text-align:center; background-color: #80ff00; width:150px">Население</h2>
         <button class="open"  onclick="(document.getElementById('tab2').style.display='block')">Открыть</button>
         <button class="close" onclick="(document.getElementById('tab2').style.display='none')">Закрыть</button>
         <div id="tab2" id="tab2">
@@ -85,8 +87,8 @@
                                                 {{--3 Регион --}}
 
 <div class="txt_1" id="t3">
-        <h4 style="color:black;text-align:left">3</h3>
-        <h3 style="color:black;text-align:center; background-color: cadetblue; width:150px">Регион</h3>
+        <h4 style="color:black;text-align:left">3</h2>
+        <h2 style="color:black;text-align:center; background-color: #80ff00; width:150px">Регион</h2>
         <button class="open"  onclick="(document.getElementById('tab3').style.display='block')">Открыть</button>
         <button class="close" onclick="(document.getElementById('tab3').style.display='none')">Закрыть</button>
         <div id="tab3">
@@ -120,8 +122,9 @@
 
                                                     {{--4 Эклолгический статус --}}
     <div class="txt_1" id="t4">
-        <h4 style="color:black;text-align:left">4</h3>
-        <h3 style="color:black;text-align:center; background-color: cadetblue; width:200px">Эклолгический статус</h3>
+        <h4 style="color:black;text-align:left">4</h2>
+        <h2 style="color:black;text-align:center; background-color: #80ff00; width:250px">
+            Эклолгический статус</h2>
         <button class="open"  onclick="(document.getElementById('tab4').style.display='block')">Открыть</button>
         <button class="close" onclick="(document.getElementById('tab4').style.display='none')">Закрыть</button>
         <div id="tab4">
@@ -152,8 +155,8 @@
 
                                                 {{--5 Погода --}}
     <div class="txt_1" id="t5">
-        <h4 style="color:black;text-align:left">5</h3>
-        <h3 style="color:black;text-align:center; background-color: cadetblue; width:150px">Погода</h3>
+        <h4 style="color:black;text-align:left">5</h2>
+        <h2 style="color:black;text-align:center; background-color: #80ff00; width:150px">Погода</h2>
         <button class="open"  onclick="(document.getElementById('tab5').style.display='block')">Открыть</button>
         <button class="close" onclick="(document.getElementById('tab5').style.display='none')">Закрыть</button>
         <div id="tab5">
@@ -232,7 +235,7 @@
     </div>   
 </div>
 <style>
-    .tabs { width: 100%; padding: 0px; margin: 0 auto; text-align: center}
+    .tabs { width: 1000px; padding: 0px; margin: 0 auto; text-align: center}
     .tabs>input { display: none; }
     .tabs>input:checked + label {
     color: #000000;
@@ -258,7 +261,25 @@
         margin-top: 5px;
         border: 2px solid rgb(63, 8, 8);}
     .open{background-color:#4aec4a}
-    .close{background-color:#f76d5b}
+    #close span {
+  background: rgb(0, 238, 127);
+  background: linear-gradient(0deg, rgb(55, 124, 9) 0%, rgb(146, 238, 27) 100%);
+  display: block;
+  position: absolute;
+  width: 130px;
+  height: 40px;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  border-radius: 5px;
+  margin:0;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
 #tab_1:checked ~ .txt_1,
 #tab_2:checked ~ #txt_2,
 #tab_3:checked ~ #txt_3,
@@ -280,7 +301,7 @@
     margin:0 auto;
     text-align: center;
     align-self: center;
-    width: 700px;
+    width: 900px;
     background-color: #086ab9;
     margin-top: 10px;
     border: 2px solid rgb(63, 8, 8);
@@ -294,6 +315,97 @@
 #t3{background-image:url("/images/регион.jpg"); }
 #t4{background-image:url("/images/экология.png"); }
 #t5{background-image:url("/images/погода.jpg"); }
+
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  color: rgb(124, 9, 9);
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+.btn-12{
+  position: relative;
+  right: 20px;
+  bottom: 20px;
+  border:none;
+  box-shadow: none;
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  -webkit-perspective: 230px;
+  perspective: 230px;
+}
+.btn-12 span {
+  background: rgb(238, 0, 131);
+  background: linear-gradient(0deg, rgb(124, 9, 80) 0%, rgb(213, 27, 238) 100%);
+  display: block;
+  position: absolute;
+  width: 130px;
+  height: 40px;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  border-radius: 5px;
+  margin:0;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.btn-12 span:nth-child(1) {
+  box-shadow:
+   -7px -7px 20px 0px #fff9,
+   -4px -4px 5px 0px #fff9,
+   7px 7px 20px 0px #0002,
+   4px 4px 5px 0px #0001;
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+.btn-12 span:nth-child(2) {
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+.btn-12:hover span:nth-child(1) {
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+.btn-12:hover span:nth-child(2) {
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+ color: transparent;
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+}
+
 </style>
+@endsection
+
 </body>
 </html>

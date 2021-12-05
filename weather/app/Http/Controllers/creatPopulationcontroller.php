@@ -19,13 +19,12 @@ class creatpopulationcontroller extends Controller
     $child = $request->input('child');
     $adults = $request->input('adults');
     $pensioners = $request->input('pensioners');
-    if ($request->hasAny('pensioners')){
     DB::insert('insert into composition_of_population (ID,child,adults,pensioners)values(?,?,?,?)',
     [$br,$child,$adults,$pensioners]);
     $valid = $request->validate([
-        'pensioners'=>'gte:0',
+        'child'=>'gte:0'
     ]);
-    return view('create');
-    }
+    return view('population');
+    
     }
 }

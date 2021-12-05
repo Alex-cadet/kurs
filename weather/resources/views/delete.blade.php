@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-<body style="background:#f13c45">
-    <div class="main">
-        <a href="/">На главную</a>
-    </div>
+<body style="background:#d4343c">
+    @extends('layout_but')
+@section('butt')
+    
     <h1 style="color:black;text-align:center">Удаление</h1>
     <form method="POST" action=''>
         <label for="">Удалите строку из таблицы "Погода", указав id:</label>
@@ -33,5 +33,7 @@
     <style>
         .box{margin-top: 50px;}
     </style>
+
+@endsection
 </body>
 </html>
