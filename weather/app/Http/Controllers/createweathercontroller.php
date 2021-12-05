@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Models\weather;
 
 
 class createWeatherController extends Controller
@@ -14,8 +15,7 @@ class createWeatherController extends Controller
     }
      public function createWeather(Request $req) 
    {
-       if($req->hasAny('wind'))
-       {       
+    $wea = new weather();     
     $id_weather = $req->input('id_weather');
     $temperature = $req->input('temperature');
     $wind = $req->input('wind');
@@ -33,7 +33,7 @@ class createWeatherController extends Controller
     ]);
     return view('weather');
 
-        }
+        
     }
    
 }

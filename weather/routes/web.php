@@ -23,7 +23,9 @@ Route::get('/', function () {
 Route::get('create', function () {
     return view('create');
 });
-Route::get('read', [readcontroller::class,'selMinus']);
+Route::get('read', [readcontroller::class,'fullVar']);
+
+Route::get('read/ad', [readcontroller::class,'regAdults']);
 
 Route::get('delete', [clearController::class,'showWeather']);
 

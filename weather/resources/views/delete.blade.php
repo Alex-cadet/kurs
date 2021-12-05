@@ -20,9 +20,13 @@
     <div class="box">
      <?php
     use App\Models\weather;
+    $weather = new weather();
     foreach (weather::all() as $wea)
-    {
-        echo "<font color='white'>".$wea->PK."</font>"." ".$wea->precipitation ." ".$wea->temperature."<br>";
+    {   
+        $tempStatus = $wea->temperature;
+        $tempStatus = $weather->AddDegree($tempStatus);
+        echo "<font color='white'>".$wea->PK.
+            "</font>"." ".$wea->precipitation ." ".$tempStatus."<br>";
     }
     ?>
     </div> 
