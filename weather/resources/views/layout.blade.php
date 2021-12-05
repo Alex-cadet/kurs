@@ -24,12 +24,14 @@
 
     <style>
         .main{text-align: left;vertical-align: top;color: #e6280f}
-        .body{background-color: #008000;}
+        .body{
+            background-color: #008000;
+        }
         .form{margin-top: 50px;}
         .box {
         display: inline-block; /*располагаем блоки в ряд по горизонтали*/
         margin-right: 0.15em;
-        background-color: #b20ac2b4;
+        background-color: #e7b019ef;
         margin-left: auto;
         margin-right: auto;
          }

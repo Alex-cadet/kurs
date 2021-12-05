@@ -10,7 +10,7 @@
     <div class="main">
         <a href="/">На главную</a>
     </div>
-    <H1 style="color:black;text-align:center">Изменение</H1>
+    <H1 style="color:black;text-align:center">Внесение изменений в запись</H1>
     <form action="" method="POST">
         <label for="">Поменять у региона</label>
         <div class="box">
