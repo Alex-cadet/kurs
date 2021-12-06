@@ -1,6 +1,9 @@
     <div class="form">
         <form method="POST" action="">
             <h3 style="color:black;text-align:center">Возрастной состав региона</h3>
+            @extends('layout')
+            @section('mian_create')
+                
             <input name="id" type="text" placeholder="id">
             <input name="adults" type="text" placeholder="Взрослые">
             <input name="child" type="text" placeholder="Дети">
@@ -9,7 +12,6 @@
             @csrf
         </form>
         </div>
-        @extends('layout')
 <style>
     input[type=text] {padding:5px; border:2px solid rgb(204, 204, 204); 
 -webkit-border-radius: 5px;
@@ -36,7 +38,7 @@ input[type=submit] {padding:5px 15px; background:rgb(204, 4, 187); border:0 none
   -webkit-transform: translate(-7px, 8px);
   transform: translate(-7px, 8px);} 
 
-    
+  @endsection  
 </style>
 </body>
 </html>

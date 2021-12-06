@@ -1,6 +1,8 @@
 <div class="form">
     <form method="POST" action="">
-        <h3 style="color:black;text-align:center">Экологический статус"</h3>
+        <h3 style="color:black;text-align:center">Экологический статус</h3>
+        @extends('layout')
+        @section('mian_create')
         <input name="id" type="text" placeholder="id">
         <input name="count_vehicles" type="text" placeholder="Количество ТС">
         <input name="count_plants" type="text" placeholder="Число заводов">
@@ -40,7 +42,6 @@
         @csrf
     </form>
     </div>
-    @extends('layout')
 <style>
 input[type=text] {padding:5px; border:2px solid rgb(204, 204, 204); 
 -webkit-border-radius: 5px;
@@ -67,7 +68,7 @@ box-shadow: none;
 -webkit-transform: translate(-7px, 8px);
 transform: translate(-7px, 8px);} 
 
-
+@endsection  
 </style>
 </body>
 </html>

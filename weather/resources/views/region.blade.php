@@ -1,6 +1,8 @@
 <div class="form">
     <form method="POST" action="">
         <h3 style="color:black;text-align:center">Регион</h3>
+        @extends('layout')
+        @section('mian_create')
         <input name="id" type="text" placeholder="id">
         <input name="name" type="text" placeholder="Название">
         <input name="square" type="text" placeholder="Площадь">
@@ -53,7 +55,6 @@
         @csrf
     </form>
     </div>
-    @extends('layout')
 <style>
 input[type=text] {padding:5px; border:2px solid rgb(204, 204, 204); 
 -webkit-border-radius: 5px;
@@ -80,7 +81,7 @@ box-shadow: none;
 -webkit-transform: translate(-7px, 8px);
 transform: translate(-7px, 8px);} 
 
-
+@endsection  
 </style>
 </body>
 </html>

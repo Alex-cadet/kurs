@@ -42,6 +42,8 @@ Route::post('population', [creatpopulationcontroller::class,'createPopulationCat
 
 Route::get('population', [creatpopulationcontroller::class,'showPoulation']);
 
+Route::post('population', [creatpopulationcontroller::class,'validAge']);
+
 Route::post('weather', [createWeatherController::class,'createWeather']);
 
 Route::get('weather', [createWeatherController::class,'showWeather']);
@@ -57,6 +59,8 @@ Route::post('main_population', [createMainPopulController::class,'createMainPopu
 Route::get('eco_status', [createEcoController::class,'showEco']);
 
 Route::post('eco_status', [createEcoController::class,'createEco']);
+
+Route::post('eco_status', [createEcoController::class,'validEco']);
 
 
 

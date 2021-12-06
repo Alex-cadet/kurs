@@ -1,13 +1,15 @@
 <div class="form">
     <form method="POST" action="">
         <h3 style="color:black;text-align:center">Население</h3>
+        @extends('layout')
+        @section('mian_create')
         <input name="id" type="text" placeholder="id">
         <input name="count_people" type="text" placeholder="Число жителей">
         <input name="citizen_count" type="text" placeholder="Доля городского населения">
         {{-- composition_of_population --}}
         
         <div class="box">
-            <label for="">Код возратсного состава</label>
+            <label for=""> Код возрастного состава населения региона </label>
             <select name="composition_of_population" id="" size=1>
             <?php
             $composition_of_populations = DB::table('composition_of_population')
@@ -22,9 +24,6 @@
         @csrf
     </form>
     </div>
-
-
-    @extends('layout')
 <style>
 input[type=text] {padding:5px; border:2px solid rgb(204, 204, 204); 
 -webkit-border-radius: 5px;
@@ -50,7 +49,7 @@ input[type=submit]:active {
 box-shadow: none;
 -webkit-transform: translate(-7px, 8px);
 transform: translate(-7px, 8px);} 
-
+@endsection  
 
 </style>
 </body>

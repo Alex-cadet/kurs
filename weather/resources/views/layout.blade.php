@@ -8,7 +8,7 @@
 </head>
 <body class="body">    
     <div></div>
-        @yield('mian_create')   
+           
             @if($errors->any())
             <div class="alert">
                 <ul>
@@ -18,7 +18,7 @@
                 </ul>
             </div>
             @endif   
-
+            @yield('mian_create')
     <style>
         .main{text-align: left;vertical-align: top;color: #e6280f}
         .body{
@@ -34,6 +34,7 @@
          }
          .alert {
             background-color: #e6280f;
+            width: 500px;
          }
          .button{display: inline-block; margin-right: 1.25em;}
     </style>

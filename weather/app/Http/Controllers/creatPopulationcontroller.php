@@ -13,7 +13,7 @@ class creatpopulationcontroller extends Controller
         return view('population');
     }
    
-    public function createPopulationCateg(Request $request)
+    public static function createPopulationCateg(Request $request)
     {          
     $br = $request->input('id');
     $child = $request->input('child');
@@ -21,10 +21,26 @@ class creatpopulationcontroller extends Controller
     $pensioners = $request->input('pensioners');
     DB::insert('insert into composition_of_population (ID,child,adults,pensioners)values(?,?,?,?)',
     [$br,$child,$adults,$pensioners]);
-    $valid = $request->validate([
-        'child'=>'gte:0'
-    ]);
+    
     return view('population');
     
+    }
+
+    public function validAge(Request $request)
+    {
+        $child = $request->input('child');
+        $adults = $request->input('adults');
+        $pensioners = $request->input('pensioners');
+        $sumAd = 100-($child+$pensioners);
+        $sumCh = 100-($adults+$pensioners);
+        $sumPn = 100-($child+$adults);
+        $request->validate([
+            'id'=>'required',
+            'child'=>"required|integer|size:$sumCh",
+            'adults'=>"required|integer|size:$sumAd",
+            'pensioners'=>"required|integer|size:$sumPn",
+        ]);   
+        creatpopulationcontroller::createPopulationCateg($request);
+        return view('population');
     }
 }

@@ -95,7 +95,7 @@ return [
     'numeric' => 'The :attribute must be a number.',
     'present' => 'The :attribute field must be present.',
     'regex' => 'The :attribute format is invalid.',
-    'required' => 'The :attribute field is required.',
+    'required' => ' :attribute обязательно для заполнения!',
     'required_if' => 'The :attribute field is required when :other is :value.',
     'required_unless' => 'The :attribute field is required unless :other is in :values.',
     'required_with' => 'The :attribute field is required when :values is present.',
@@ -104,9 +104,11 @@ return [
     'required_without_all' => 'The :attribute field is required when none of :values are present.',
     'same' => 'The :attribute and :other must match.',
     'size' => [
-        'numeric' => 'The :attribute must be :size.',
+        'numeric' => ' Сумма детей, взрослых и пенсионеров должна быть 100%.
+        Если два  другие поля корректны,то
+        :attribute должно быть равно :size',
         'file' => 'The :attribute must be :size kilobytes.',
-        'string' => 'The :attribute must be :size characters.',
+        'string' => 'The :attribute должно быть равно :size ',
         'array' => 'The :attribute must contain :size items.',
     ],
     'starts_with' => 'The :attribute must start with one of the following: :values',
@@ -146,7 +148,13 @@ return [
     */
 
     'attributes' => [
-        'pensioners'=>'Поле "Пенсионеры"'
+        'ID'=>'Поле "id"',
+        'id'=>'Поле "id"',
+        'pensioners'=>'Поле "Пенсионеры"',
+        'adults'=>'Поле "Взрослые"',
+        'child'=>'Поле "Дети"',
+        'count_vehicles'=>'Поле "Количество ТС"',
+        'count_plants'=>'Поле "Число заводов"',
     ],
 
 ];

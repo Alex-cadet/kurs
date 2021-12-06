@@ -1,7 +1,8 @@
-@extends('layout')
 <div class="form" name="f2">        
     <form method="POST" action="">            
         <h3 style="color:black;text-align:center">Погода</h3>
+        @extends('layout')
+        @section('mian_create')
         <input name="id_weather" type="text" placeholder="id">
         <input name="temperature" type="text" placeholder="Температура">
         
@@ -140,6 +141,6 @@ input[type=submit]:active {
       -webkit-transform: translate(-7px, 8px);
       transform: translate(-7px, 8px);} 
     
-        
+      @endsection      
     </style>
     </div>

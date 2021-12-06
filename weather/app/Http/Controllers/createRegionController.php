@@ -23,8 +23,8 @@ class createRegionController extends Controller
     $type_of_region = $req->input('type_of_region');
     $ecology_state = $req->input('ecology_state');
     $population = $req->input('population');
-    DB::insert('insert into weather (id,name,square,avia_connection,type_of_region,region_id,
-    population)values(?,?,?,?,?,?,?)',
+    DB::insert('insert into region (id,name,square,avia_connection,type_of_region,ecology_state_id,population_id)
+    values(?,?,?,?,?,?,?)',
     [$id,$name,$square,$avia_connection,$type_of_region,$ecology_state,$population]);
     
     return view('region');

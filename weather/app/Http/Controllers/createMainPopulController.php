@@ -18,8 +18,9 @@ class createMainPopulController extends Controller
     $id = $request->input('id');
     $count_people = $request->input('count_people');
     $citizen_count = $request->input('citizen_count');
-    $composition_of_populations = $request->input('composition_of_populations');
-    DB::insert('insert into composition_of_population (ID,count_people,citizen_count,composition_of_populations)values(?,?,?,?)',
+    $composition_of_populations = $request->input('composition_of_population');
+    DB::insert('insert into population
+     (ID,count_people,citizen_count,composition_of_population)values(?,?,?,?)',
     [$id,$count_people,$citizen_count,$composition_of_populations]);
    
     return view('main_population');
