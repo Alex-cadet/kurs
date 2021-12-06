@@ -16,6 +16,9 @@ use App\Http\Controllers\readcontroller;
 use App\Http\Controllers\clearController;
 use App\Http\Controllers\updateController;
 use App\Http\Controllers\createWeatherController;
+use App\Http\Controllers\createRegionController;
+use App\Http\Controllers\createMainPopulController;
+use App\Http\Controllers\createEcoController;
 Route::get('/', function () {
     return view('main');
 });
@@ -42,6 +45,19 @@ Route::get('population', [creatpopulationcontroller::class,'showPoulation']);
 Route::post('weather', [createWeatherController::class,'createWeather']);
 
 Route::get('weather', [createWeatherController::class,'showWeather']);
+
+Route::get('region', [createRegionController::class,'showRegion']);
+
+Route::post('region', [createRegionController::class,'createRegion']);
+
+Route::get('main_population', [createMainPopulController::class,'showMainPoulation']);
+
+Route::post('main_population', [createMainPopulController::class,'createMainPopulation']);
+
+Route::get('eco_status', [createEcoController::class,'showEco']);
+
+Route::post('eco_status', [createEcoController::class,'createEco']);
+
 
 
 

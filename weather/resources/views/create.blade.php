@@ -7,6 +7,9 @@
 <H1 style="color:black;text-align:center">Добавление новой записи в таблицу</H1>
     <iframe src="{{URL::to('/population')}}"  frameborder="1" width=100% height="250px"></iframe>
     <iframe src="{{URL::to('/weather')}}" frameborder="1" width=100% height="250px"></iframe>
+    <iframe src="{{URL::to('/region')}}" frameborder="1" width=100% height="250px"></iframe>
+    <iframe src="{{URL::to('/main_population')}}" frameborder="1" width=100% height="250px"></iframe>
+    <iframe src="{{URL::to('/eco_status')}}" frameborder="1" width=100% height="250px"></iframe>
  @endsection
 
 </html>

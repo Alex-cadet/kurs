@@ -44,6 +44,7 @@
             </div>
         {{-- region --}}
             <div class="box">
+                <label for="">Код региона</label>
                 <select name="region" id="" size=1>
                 <?php
                 $users = DB::table('region')
