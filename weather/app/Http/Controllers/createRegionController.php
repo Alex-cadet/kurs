@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\region;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Validation\Rule;
+
 
 class createRegionController extends Controller
 {
@@ -12,7 +14,7 @@ class createRegionController extends Controller
     {
         return view('region');
     }
-     public function createRegion(Request $req) 
+     public static function createRegion(Request $req) 
    {
 
     $reg = new region();     
@@ -29,4 +31,19 @@ class createRegionController extends Controller
     
     return view('region');
    }
+
+   public function validRegion(Request $request)
+    {
+         $request->validate([
+            'id'=>'required',
+            'name'=>'required',
+            'square'=>'required|numeric|gt:0',
+            'avia_connection'=>[
+                'required',
+                Rule::in(["Есть","Нет"])
+            ]
+        ]);                      
+        createRegionController::createRegion($request);
+        return view('weather');
+    }   
 }

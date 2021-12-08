@@ -13,7 +13,7 @@ class createWeatherController extends Controller
     {
         return view('weather');
     }
-     public function createWeather(Request $req) 
+     public static function createWeather(Request $req) 
    {
     $wea = new weather();     
     $id_weather = $req->input('id_weather');
@@ -27,13 +27,21 @@ class createWeatherController extends Controller
     DB::insert('insert into weather (PK,temperature,wind,precipitation,atmospheric_pressure,region_id,
     cloudiness,date)values(?,?,?,?,?,?,?,?)',
     [$id_weather,$temperature,$wind,$precipitation,$atmospheric_pressure,$region,$cloudiness,$date]);
-    $valid = $req->validate([
-        'temperature'=>'required|numeric',
-        'date'=>'required', 
-    ]);
     return view('weather');
 
         
+    }
+
+    public function validWeather(Request $request)
+    {
+         $request->validate([
+            'id_weather'=>'required',
+            'temperature'=>'required',
+            'date'=>'required',
+        ]);   
+                   
+        createWeatherController::createWeather($request);
+        return view('weather');
     }
    
 }

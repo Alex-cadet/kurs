@@ -13,7 +13,7 @@ class createMainPopulController extends Controller
         return view('main_population');
     }
    
-    public function createMainPopulation(Request $request)
+    public static function createMainPopulation(Request $request)
     {          
     $id = $request->input('id');
     $count_people = $request->input('count_people');
@@ -21,9 +21,19 @@ class createMainPopulController extends Controller
     $composition_of_populations = $request->input('composition_of_population');
     DB::insert('insert into population
      (ID,count_people,citizen_count,composition_of_population)values(?,?,?,?)',
-    [$id,$count_people,$citizen_count,$composition_of_populations]);
-   
-    return view('main_population');
-    
+    [$id,$count_people,$citizen_count,$composition_of_populations]);   
+    return view('main_population');    
+    }
+
+    public function validMainPn(Request $request)
+    {
+         $request->validate([
+            'id'=>'required',
+            'count_people'=>'required|numeric|gt:0',
+            'citizen_count'=>'required|numeric|gt:0',
+        ]);   
+                   
+        createMainPopulController::createMainPopulation($request);
+        return view('main_population');
     }
 }

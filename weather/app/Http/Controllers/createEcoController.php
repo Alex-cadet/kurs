@@ -32,8 +32,8 @@ class createEcoController extends Controller
     {
          $request->validate([
             'id'=>'required',
-            'count_vehicles'=>'required',
-            'count_plants'=>'required',
+            'count_vehicles'=>'required|numeric|gt:0',
+            'count_plants'=>'required|numeric|gt:0',
         ]);   
                    
         createEcoController::createEco($request);

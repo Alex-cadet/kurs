@@ -21,4 +21,6 @@ class updateController extends Controller
         ->update(['type_of_region'=>$type_of_region]);
         return view('update');
     }
+
+    
 }

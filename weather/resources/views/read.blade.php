@@ -18,7 +18,7 @@
     <label for="tab_2">Вкладка №2</label>
 
     <input type="radio" name="inset" value="" id="tab_3">
-    <label for="tab_3">Вкладка №3</label>
+    <label for="tab_3">Параметры</label>
 
     <input type="radio" name="inset" value="" id="tab_4">
     <label for="tab_4">Запросы</label>
@@ -60,8 +60,8 @@
     <div class="txt_1" id="t2">
         <h4 style="color:black;text-align:left">2</h2>
         <h2 style="color:black;text-align:center; background-color: #80ff00; width:150px">Население</h2>
-        <button class="open"  onclick="(document.getElementById('tab2').style.display='block')">Открыть</button>
-        <button class="close" onclick="(document.getElementById('tab2').style.display='none')">Закрыть</button>
+        <button onclick="(document.getElementById('tab2').style.display='block')"class="custom-btn btn-12"><span>Таблицу</span><span>Открой</span></button>
+        <button onclick="(document.getElementById('tab2').style.display='none')"class="custom-btn btn-12" id="close"><span>Таблицу</span><span>Закрой</span></button>
         <div id="tab2" id="tab2">
             <table border="2" align="center" style="background-color: cadetblue">
                 <tr bgcolor=yellow><td>id</td>
@@ -89,8 +89,8 @@
 <div class="txt_1" id="t3">
         <h4 style="color:black;text-align:left">3</h2>
         <h2 style="color:black;text-align:center; background-color: #80ff00; width:150px">Регион</h2>
-        <button class="open"  onclick="(document.getElementById('tab3').style.display='block')">Открыть</button>
-        <button class="close" onclick="(document.getElementById('tab3').style.display='none')">Закрыть</button>
+        <button onclick="(document.getElementById('tab3').style.display='block')"class="custom-btn btn-12"><span>Таблицу</span><span>Открой</span></button>
+        <button onclick="(document.getElementById('tab3').style.display='none')"class="custom-btn btn-12" id="close"><span>Таблицу</span><span>Закрой</span></button>
         <div id="tab3">
             <table border="2" align="center" style="background-color: cadetblue">
                 <tr bgcolor=yellow>
@@ -125,8 +125,8 @@
         <h4 style="color:black;text-align:left">4</h2>
         <h2 style="color:black;text-align:center; background-color: #80ff00; width:250px">
             Эклолгический статус</h2>
-        <button class="open"  onclick="(document.getElementById('tab4').style.display='block')">Открыть</button>
-        <button class="close" onclick="(document.getElementById('tab4').style.display='none')">Закрыть</button>
+        <button onclick="(document.getElementById('tab4').style.display='block')"class="custom-btn btn-12"><span>Таблицу</span><span>Открой</span></button>    
+        <button onclick="(document.getElementById('tab4').style.display='none')"class="custom-btn btn-12" id="close"><span>Таблицу</span><span>Закрой</span></button>
         <div id="tab4">
             <table border="2" align="center">
                 <tr bgcolor=yellow>
@@ -157,8 +157,8 @@
     <div class="txt_1" id="t5">
         <h4 style="color:black;text-align:left">5</h2>
         <h2 style="color:black;text-align:center; background-color: #80ff00; width:150px">Погода</h2>
-        <button class="open"  onclick="(document.getElementById('tab5').style.display='block')">Открыть</button>
-        <button class="close" onclick="(document.getElementById('tab5').style.display='none')">Закрыть</button>
+        <button onclick="(document.getElementById('tab5').style.display='block')"class="custom-btn btn-12"><span>Таблицу</span><span>Открой</span></button>        
+        <button onclick="(document.getElementById('tab5').style.display='none')"class="custom-btn btn-12" id="close"><span>Таблицу</span><span>Закрой</span></button>
         <div id="tab5">
             <table border="2" align="center">
                 <tr bgcolor=yellow>
@@ -234,7 +234,38 @@
             </div>           
     </div>   
 </div>
+
+                                                        {{-- Параметры --}}
+
+<div id="txt_3">
+    <div class="query">
+        <div id="sq">
+            <label for="" class="l1">Показать регионы, у которых площадь</label>
+            <form action="/square" method="post">
+            <select name="symbol">
+                <option>больше</option>
+                <option>меньше</option>
+                <option>равно</option>
+                <option>не равно</option>
+            </select>
+            <input type="text" placeholder="Площадь" name='square'>
+            <input type="submit" value="Показать">
+            @csrf
+            </form>
+        </div>
+        <div></div>
+    </div>    
+</div>                                                   
+
 <style>
+    .l1{
+            background-color: rgb(5, 90, 116);
+            font-size: 20px;
+            font-weight: bolder;
+            }
+    #sq{
+        display:inline-flex;
+    }
     .tabs { width: 1000px; padding: 0px; margin: 0 auto; text-align: center}
     .tabs>input { display: none; }
     .tabs>input:checked + label {
@@ -262,8 +293,8 @@
         border: 2px solid rgb(63, 8, 8);}
     .open{background-color:#4aec4a}
     #close span {
-  background: rgb(0, 238, 127);
-  background: linear-gradient(0deg, rgb(55, 124, 9) 0%, rgb(146, 238, 27) 100%);
+  background: rgb(1, 17, 10);
+  background: linear-gradient(0deg, rgb(15, 34, 2) 0%, rgb(14, 24, 1) 100%);
   display: block;
   position: absolute;
   width: 130px;
@@ -287,7 +318,7 @@
 #reg{
     display: none;
     margin-top: 20px;}
-#reg1{
+#reg1,#reg2{
     display: none;
     margin-top: 20px;}
 #tab1,#tab2,#tab3,#tab4,#tab5{
@@ -347,8 +378,8 @@
   perspective: 230px;
 }
 .btn-12 span {
-  background: rgb(238, 0, 131);
-  background: linear-gradient(0deg, rgb(124, 9, 80) 0%, rgb(213, 27, 238) 100%);
+  background: rgb(145, 6, 6);
+  background: linear-gradient(0deg, rgb(114, 5, 14) 0%, rgb(85, 3, 17) 100%);
   display: block;
   position: absolute;
   width: 130px;

@@ -28,7 +28,8 @@ Route::get('create', function () {
 });
 Route::get('read', [readcontroller::class,'fullVar']);
 
-Route::get('read/ad', [readcontroller::class,'regAdults']);
+Route::post('square', [readcontroller::class,'showPar']);
+
 
 Route::get('delete', [clearController::class,'showWeather']);
 
@@ -46,15 +47,21 @@ Route::post('population', [creatpopulationcontroller::class,'validAge']);
 
 Route::post('weather', [createWeatherController::class,'createWeather']);
 
+Route::post('weather', [createWeatherController::class,'validWeather']);
+
 Route::get('weather', [createWeatherController::class,'showWeather']);
 
 Route::get('region', [createRegionController::class,'showRegion']);
 
 Route::post('region', [createRegionController::class,'createRegion']);
 
+Route::post('region', [createRegionController::class,'validRegion']);
+
 Route::get('main_population', [createMainPopulController::class,'showMainPoulation']);
 
 Route::post('main_population', [createMainPopulController::class,'createMainPopulation']);
+
+Route::post('main_population', [createMainPopulController::class,'validMainPn']);
 
 Route::get('eco_status', [createEcoController::class,'showEco']);
 

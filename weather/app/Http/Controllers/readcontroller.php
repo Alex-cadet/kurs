@@ -21,19 +21,62 @@ class readcontroller extends Controller
         ->where('type_of_region','=','Промышленный')
         ->distinct()->get(['region.name','composition_of_population.adults','weather.*','region.avia_connection']);
 
+        $flySt = new region();    
+
         
-
-         $flySt = new region();
-        // foreach($adReg->all() as $ad)
-        // {
-        //    return $flySt->flyWeather($ad->avia_connection,$ad->wind);
-        // }
-
+      
       return view('read',[
         'minus'=>$minus->all(),
         'adReg'=>$adReg->all(),
         'flySt'=>$flySt,
     ]);
-
     }
+    public static function showPar(Request $req)
+    {
+      $square = $req->input('square');
+      $symbol = $req->input('symbol');
+      
+      if ($symbol=="больше") {
+        $symbol = '>';
+        $regSquare = region::where('square',$symbol,$square)
+        ->get(['name','square']);
+        return view('square',[
+          'regSquare'=>$regSquare->all(), 
+        ]);
+      
+      }
+      elseif ($symbol=='меньше') {
+        $symbol = '<';
+        $regSquare = region::where('square',$symbol,$square)
+        ->get(['name','square']);
+        return view('square',[
+          'regSquare'=>$regSquare->all(), 
+        ]);
+      
+      }
+      elseif ($symbol=='равно') {
+        $symbol = '=';
+        $regSquare = region::where('square',$symbol,$square)
+        ->get(['name','square']);
+        return view('square',[
+          'regSquare'=>$regSquare->all(), 
+        ]);
+      
+      }
+      elseif ($symbol=='не равно') {
+        $symbol = '!=';
+        $regSquare = region::where('square',$symbol,$square)
+        ->get(['name','square']);
+        return view('square',[
+          'regSquare'=>$regSquare->all(), 
+        ]);
+      
+      }
+      
+      
+      
+      
+    }
+
+    
 }

@@ -45,7 +45,7 @@
             </div>
         {{-- region --}}
             <div class="box">
-                <label for="">Код региона</label>
+                <label for="" >Код региона</label>
                 <select name="region" id="" size=1>
                 <?php
                 $users = DB::table('region')
@@ -68,7 +68,10 @@
                 ?>    
                 </select>
             </div>
+            <div class="box">
+            <label for="" >Дата</label>
             <input type="date" id="date" name="date"/>
+            </div>
             <input type="submit" value="Добавить">
         @csrf
     </form>

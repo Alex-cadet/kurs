@@ -45,7 +45,7 @@ return [
     'file' => 'The :attribute must be a file.',
     'filled' => 'The :attribute field must have a value.',
     'gt' => [
-        'numeric' => 'The :attribute must be greater than :value.',
+        'numeric' => 'The :attribute должно быть больше :value.',
         'file' => 'The :attribute must be greater than :value kilobytes.',
         'string' => 'The :attribute must be greater than :value characters.',
         'array' => 'The :attribute must have more than :value items.',
@@ -57,7 +57,7 @@ return [
         'array' => 'The :attribute must have :value items or more.',
     ],
     'image' => 'The :attribute must be an image.',
-    'in' => 'The selected :attribute is invalid.',
+    'in' => ' :attribute должно иметь значение "Есть" или "Нет" ',
     'in_array' => 'The :attribute field does not exist in :other.',
     'integer' => 'The :attribute must be an integer.',
     'ip' => 'The :attribute must be a valid IP address.',
@@ -92,7 +92,7 @@ return [
     ],
     'not_in' => 'The selected :attribute is invalid.',
     'not_regex' => 'The :attribute format is invalid.',
-    'numeric' => 'The :attribute must be a number.',
+    'numeric' => 'The :attribute должно быть числом',
     'present' => 'The :attribute field must be present.',
     'regex' => 'The :attribute format is invalid.',
     'required' => ' :attribute обязательно для заполнения!',
@@ -148,13 +148,20 @@ return [
     */
 
     'attributes' => [
-        'ID'=>'Поле "id"',
+        'id_weather'=>'Поле "id"',
         'id'=>'Поле "id"',
         'pensioners'=>'Поле "Пенсионеры"',
         'adults'=>'Поле "Взрослые"',
         'child'=>'Поле "Дети"',
         'count_vehicles'=>'Поле "Количество ТС"',
         'count_plants'=>'Поле "Число заводов"',
+        'temperature'=>'Поле "Температура"',
+        'date'=>'Поле "Дата"',
+        'name'=>'Поле "Название"',
+        'square'=>'Поле "Площадь"',
+        'avia_connection'=>'Поле "Авиасообщение"',
+        'count_people'=>'Поле "Число жителей"',
+        'citizen_count'=>'Поле "Доля городского населения"',
     ],
 
 ];
