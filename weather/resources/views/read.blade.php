@@ -189,55 +189,10 @@
         </div>
     </div>
 
-    
-                                            {{-- Запросы --}}
-
-    <div id="txt_4">
-        
-        <div class="query">
-        <label for="">Вывести регионы, где температура ниже нуля</label>
-        <button class="open"  onclick="(document.getElementById('reg').style.display='block')">Открыть</button>
-        <button class="close" onclick="(document.getElementById('reg').style.display='none')">Закрыть</button>
-        <div></div>
-        <div id="reg">
-            <table border=1>
-                <tr><td style="background-color: #0e41f1; font-size: 24px;">Регион</td>
-                    <td style="background-color: #0e41f1; font-size: 24px;">Температура</td>
-                @foreach ($minus as $min)
-                <tr><td>{{ $min->name}}</td><td>{{$min->temperature}}</tr>        
-                @endforeach   
-            </table>
-        </div>     
-        </div>
-        <div class="query">
-            <label for="">Открыть по датам и возможности вылета промышленные регионы, в которых
-                процент взрослого населения больше 30%</label>
-            <button class="open" onclick="(document.getElementById('reg1').style.display='block')">Открыть</button>
-            <button class="close" onclick="(document.getElementById('reg1').style.display='none')">Закрыть</button>
-            <div></div>
-            <div id="reg1">
-                <table border=1>
-                    <tr><td style="background-color: #86e20c; font-size: 24px;">Дата</td>
-                        <td style="background-color: #86e20c; font-size: 24px;">Регион</td>
-                        <td style="background-color: #86e20c; font-size: 24px;">Доля взрослых</td>
-                        <td style="background-color: #86e20c; font-size: 24px;">Полёты</td>
-                        <td style="background-color: #86e20c; font-size: 24px;">Авиасообщение</td>
-                        <td style="background-color: #86e20c; font-size: 24px;">Ветер</td><tr>
-                    @foreach ($adReg as $ad)
-                    <tr><td>{{$ad->date}}</td><td>{{ $ad->name}}</td><td>{{$ad->adults}}%
-                        <td>{{$flySt->flyWeather($ad->avia_connection,$ad->wind)}}</td>
-                        <td>{{$ad->avia_connection}}</td>
-                        <td>{{$ad->wind}}</td></tr>        
-                    @endforeach   
-                </table>
-            </div>     
-            </div>           
-    </div>   
-</div>
 
                                                         {{-- Параметры --}}
 
-<div id="txt_3">
+    <div id="txt_3">
     <div class="query">
         <div id="sq">
             <label for="" class="l1">Показать регионы, у которых площадь</label>
@@ -257,12 +212,72 @@
     </div>    
 </div>                                                   
 
+
+    
+                                            {{-- Запросы --}}
+
+    <div id="txt_4">        
+        <div class="query">
+        <label for="" class="l2">Вывести регионы, где температура ниже нуля</label>
+        <button class="open"  onclick="(document.getElementById('reg').style.display='block')">Открыть</button>
+        <button class="close" onclick="(document.getElementById('reg').style.display='none')">Закрыть</button>
+        <div></div>
+        <div id="reg">
+            <table border=1 class="t1">
+                <tr><td style="background-color: #0e41f1; font-size: 24px;">Регион</td>
+                    <td style="background-color: #0e41f1; font-size: 24px;">Температура</td>
+                @foreach ($minus as $min)
+                <tr><td>{{ $min->name}}</td><td>{{$min->temperature}}</tr>        
+                @endforeach   
+            </table>
+        </div>     
+        </div>
+        <div class="query">
+            <label for="" class="l2">Открыть по датам и возможности вылета промышленные регионы, в которых
+                процент взрослого населения больше 30%</label>
+            <button class="open" onclick="(document.getElementById('reg1').style.display='block')">Открыть</button>
+            <button class="close" onclick="(document.getElementById('reg1').style.display='none')">Закрыть</button>
+            <div></div>
+            <div id="reg1">
+                <table border=1 class="t1">
+                    <tr><td style="background-color: #86e20c; font-size: 24px; width:100px">Дата</td>
+                        <td style="background-color: #86e20c; font-size: 24px;">Регион</td>
+                        <td style="background-color: #86e20c; font-size: 24px;">Доля взрослых</td>
+                        <td style="background-color: #86e20c; font-size: 24px;">Полёты</td>
+                        <td style="background-color: #86e20c; font-size: 24px;">Авиасообщение</td>
+                        <td style="background-color: #86e20c; font-size: 24px;">Ветер</td><tr>
+                    @foreach ($adReg as $ad)
+                    <tr><td>{{$ad->date}}</td><td>{{ $ad->name}}</td><td>{{$ad->adults}}%
+                        <td>{{$flySt->flyWeather($ad->avia_connection,$ad->wind)}}</td>
+                        <td>{{$ad->avia_connection}}</td>
+                        <td>{{$ad->wind}}</td></tr>        
+                    @endforeach   
+                </table>
+            </div>     
+            </div>           
+    </div>   
+</div>
+
+                                                        
+
+
 <style>
+    .t1{
+        background-color: #C0C0C0);
+        font-size: 20px;
+        font-weight: bolder;
+        }
+    .l2{
+        background-color: rgb(5, 90, 116);
+        font-size: 20px;
+        font-weight: bolder;
+        }
+
     .l1{
-            background-color: rgb(5, 90, 116);
-            font-size: 20px;
-            font-weight: bolder;
-            }
+        background-color: rgb(5, 90, 116);
+        font-size: 20px;
+        font-weight: bolder;
+        }
     #sq{
         display:inline-flex;
     }
