@@ -7,7 +7,8 @@ use App\Models\region;
 
 class updateController extends Controller
 {
-    public function showRegion()
+
+    public function showRegion(Request $request)
     {
         return view('update');
 
@@ -16,11 +17,12 @@ class updateController extends Controller
     public function updateRegion(Request $request)
     {
         $region = $request->input('region');
-        $type_of_region = $request->input('type_of_region');
+        $type_of_region = $request->input('type_of_region');        
         region::where('name',$region)
-        ->update(['type_of_region'=>$type_of_region]);
-        return view('update');
+        ->update(['type_of_region'=>$type_of_region]); 
+        return view('update'
+        ,['naq'=>$region,]
+    );
     }
-
     
 }

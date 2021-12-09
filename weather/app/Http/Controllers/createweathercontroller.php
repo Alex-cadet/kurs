@@ -35,7 +35,7 @@ class createWeatherController extends Controller
     public function validWeather(Request $request)
     {
          $request->validate([
-            'id_weather'=>'required',
+            'id_weather'=>'required|unique:weather,PK',
             'temperature'=>'required',
             'date'=>'required',
         ]);   

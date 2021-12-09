@@ -35,7 +35,7 @@ class creatpopulationcontroller extends Controller
         $sumCh = 100-($adults+$pensioners);
         $sumPn = 100-($child+$adults);
         $request->validate([
-            'id'=>'required',
+            'id'=>'required|unique:composition_of_population,ID',
             'child'=>"required|integer|size:$sumCh",
             'adults'=>"required|integer|size:$sumAd",
             'pensioners'=>"required|integer|size:$sumPn",

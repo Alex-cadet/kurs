@@ -31,7 +31,7 @@
         <h1 style="color:#912e07;">D</h1>
      </div>
  </div>  
- <a href="delete" class="button20">Автор</a>
+ <a href="author" class="button20">Автор</a>
 
 <style>
     .wrapper{text-align: center;margin-top: 10px;}

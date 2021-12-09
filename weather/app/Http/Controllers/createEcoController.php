@@ -31,7 +31,7 @@ class createEcoController extends Controller
     public function validEco(Request $request)
     {
          $request->validate([
-            'id'=>'required',
+            'id'=>'required|unique:ecology_state,id',
             'count_vehicles'=>'required|numeric|gt:0',
             'count_plants'=>'required|numeric|gt:0',
         ]);   

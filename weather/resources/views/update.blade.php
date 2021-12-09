@@ -43,19 +43,54 @@
                                         {{-- Таблица --}}  
 
     <div >
-        <table border=1 align="center" class='region'>
-    <?php
+        <table border=1 align="center" class='region'>          
+
+     <?php
     use App\Models\region;
-    $regionType = new region();
+    use Illuminate\Http\Request;
+    // if($naq===null)
+    // {
+    //     foreach (region::all() as $reg)
+    //     {  
+    //         echo "<tr>
+    //         <td>"."<font color='white'>".$reg->id."</td>
+    //         <td>"."</font>".$reg->name."</td>".
+    //         "<td >".$reg->type_of_region."</td>
+    //         </tr>";
+    //     }
+    // }
+    // else{
     foreach (region::all() as $reg)
-    {   
-        echo "<tr>
+        {  
+            echo "<tr>
             <td>"."<font color='white'>".$reg->id."</td>
-            <td>"."</font>".$reg->name ."</td>".
-            "<td>".$reg->type_of_region."</td>
-             </tr>";
-    }
-    ?> 
+            <td>"."</font>".$reg->name."</td>".
+            "<td >".$reg->type_of_region."</td>
+            </tr>";
+        }
+
+
+    //        if ($naq===null)
+    //        {
+    //         echo "<tr>
+    //        <td>"."<font color='white'>".$reg->id."</td>
+    //        <td>"."</font>".$reg->name."</td>".
+    //        "<td style='background-color: #e9c5c7'>".$reg->type_of_region."</td>
+    //        </tr>";
+    //        }
+    //        elseif($reg->name==$naq)
+    //        {
+    //         //$naq = 'Волгоградская область';
+    //         echo "<tr>
+    //        <td>"."<font color='white'>".$reg->id."</td>
+    //        <td>"."</font>".$reg->name."</td>".
+    //        "<td style='background-color: #d3252e'>".$reg->type_of_region."</td>
+    //        </tr>";
+    //        }
+    //     }
+    // }
+    
+    ?>
     </table>
     </div>
     

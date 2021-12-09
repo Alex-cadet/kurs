@@ -26,6 +26,12 @@ Route::get('/', function () {
 Route::get('create', function () {
     return view('create');
 });
+
+
+Route::get('author', function () {
+    return view('author');
+});
+
 Route::get('read', [readcontroller::class,'fullVar']);
 
 Route::post('square', [readcontroller::class,'showPar']);

@@ -35,7 +35,7 @@ class createRegionController extends Controller
    public function validRegion(Request $request)
     {
          $request->validate([
-            'id'=>'required',
+            'id'=>'required|unique:region,id',
             'name'=>'required',
             'square'=>'required|numeric|gt:0',
             'avia_connection'=>[

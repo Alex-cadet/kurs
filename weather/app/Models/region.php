@@ -32,23 +32,4 @@ class region extends Model
         }
         return $flyStatus;
     }
-    
-
-    
-
-    // public function colorType()
-    // {
-    //     $request = new Request();
-    //     $name = $request->input('region');
-    //     $type = region::where('name',$name);
-    //     $type->get('type_of_region');
-    //     $type_of_region = "";
-    //     if($type)
-    //     {
-    //         $type_of_region = "<td style='background-color: #86e20c'>".$type_of_region."</td>";
-    //         return $type_of_region;
-    //     }
-        
-    // }
-
 }

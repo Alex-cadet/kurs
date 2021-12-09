@@ -28,7 +28,7 @@ class createMainPopulController extends Controller
     public function validMainPn(Request $request)
     {
          $request->validate([
-            'id'=>'required',
+            'id'=>'required|unique:population,id',
             'count_people'=>'required|numeric|gt:0',
             'citizen_count'=>'required|numeric|gt:0',
         ]);   

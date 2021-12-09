@@ -305,7 +305,10 @@
     background: #086ab9;}    
     .query{
         margin-top: 5px;
-        border: 2px solid rgb(63, 8, 8);}
+        position: relative;
+        border: 2px solid rgb(63, 8, 8);
+        align-content: stretch;
+    }
     .open{background-color:#4aec4a}
     #close span {
   background: rgb(1, 17, 10);
