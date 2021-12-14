@@ -14,8 +14,8 @@
     <div class="tabs">
     <input type="radio" name="inset" value="" id="tab_1" checked>
     <label for="tab_1">Таблицы</label>
-    <input type="radio" name="inset" value="" id="tab_2">
-    <label for="tab_2">Вкладка №2</label>
+    {{-- <input type="radio" name="inset" value="" id="tab_2">
+    <label for="tab_2">Вкладка №2</label> --}}
 
     <input type="radio" name="inset" value="" id="tab_3">
     <label for="tab_3">Параметры</label>
@@ -182,7 +182,7 @@
                                     echo "<td align='left'>".$wea->atmospheric_pressure ."</td>";
                                     echo "<td align='left'>".$wea->date."</td>";
                                     echo "<td align='center'>".$wea->region_id ."</td>";
-                                    echo "<td align='left'>".$wea->cloudiness."&#9748"."</td></tr>";
+                                    echo "<td align='left'>".$wea->cloudiness."</td></tr>";
                                 }
                     ?>
             </table>

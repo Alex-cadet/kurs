@@ -1,0 +1,120 @@
+/* ********************главная********************************** */
+.b1{
+    background-size: cover;
+    background-image: url("/images/главная.jpeg")}
+    .wrapper{text-align: center;margin-top: 10px;}
+    .box {
+        display: inline-block; /*располагаем блоки в ряд по горизонтали*/
+        margin-right: 1.25em;
+         }
+    .crud{text-align: center;margin-top: 50px;background-color: #2382c2; width: 350px; margin: 0 auto;
+    opacity: .91;}
+    .button{display: inline-block; margin-right: 1.25em;}
+    #b1{background-color: #008000}
+    #b2{background-color: #0000ff}
+    #b3{background-color: yellow}
+    #b4{background-color: red}
+    
+a.button20 {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+  text-shadow: -2px 2px rgba(255,255,255,.3);
+  line-height: 1.1;
+  padding: .5em 3em .5em .6em;
+  background: linear-gradient(#ecc92b, #fce25b);
+  box-shadow:
+   0 0 0 1px #fce25b inset,
+   -1px 0px rgb(220,195,35), -1px 1px rgb(192,167,7),
+   -2px 1px rgb(219,194,34), -2px 2px rgb(191,166,6),
+   -3px 2px rgb(218,193,33), -3px 3px rgb(190,165,5),
+   -4px 3px rgb(217,192,32), -4px 4px rgb(189,164,4),
+   -5px 4px rgb(216,191,31), -5px 5px rgb(188,163,3),
+   -6px 5px rgb(215,190,30), -6px 6px rgb(187,162,2),
+   -7px 6px rgb(214,189,29), -7px 7px rgb(186,161,1),
+   -8px 7px rgb(213,188,28), -8px 8px rgb(185,160,0),
+   -7px 9px 1px rgba(0,0,0,.4),
+   -5px 11px 1px rgba(0,0,0,.2),
+   -1px 13px 4px rgba(0,0,0,.2),
+   4px 16px 7px rgba(0,0,0,.3);
+  transition: .4s;
+}
+a.button20:active {
+  box-shadow: none;
+  -webkit-transform: translate(-7px, 8px);
+  transform: translate(-7px, 8px);
+}
+a.button20:after {
+  content: "";
+  position: absolute;
+  top: calc(50% - .6em/2);
+  right: .6em;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  border: .37em solid;
+  border-top: none;
+  border-left: none;
+  width: .6em;
+  height: .6em;
+  box-shadow: inset -2px 2px rgba(255,255,255,.3);
+}
+/******************************************** автор**************** */
+.bo{
+    background-color: rgb(27, 168, 126)
+}
+/* *********************************** update*****************************/
+.box_update {
+    display: inline-block; /*располагаем блоки в ряд по горизонтали*/
+    margin-right: 0.15em;
+     }
+     .region{
+         margin-top: 20px;
+        background-color: chocolate;
+        font-size: 22px;
+        font-weight: bolder;
+        }
+    #s1,#s2{
+        height: 40px;
+        background-color: rgb(218, 198, 24);
+        font-size: 16px; 
+        font-family: sans-serif; 
+        font-weight: 700; 
+        line-height: 1.3; 
+        padding: .6em 1.4em .5em .8em; width: 100%; 
+        max-width: 100%; 
+        box-sizing: border-box; 
+        margin: 0; 
+        border: 1px solid #aaa;
+         box-shadow: 0 1px 0 1px rgba(0,0,0,.04); 
+        border-radius: .5em;
+         -moz-appearance: none;
+         -webkit-appearance: none;
+         appearance: none;
+        background-repeat: no-repeat, repeat;
+        background-position: right .7em top 50%, 0 0;
+        background-size: .65em auto, 100%; 
+    }        
+    /* ************************************************delete******************** */
+    .box_del{
+        margin-top: 50px;
+
+    }
+    .t1_del{
+        background-color: #86225e;  
+        color: rgb(0, 12, 12);      
+        font-weight: 200;
+        margin-left: 100px;
+
+
+    }
+    .t1_del tr{
+        font-weight: bold;
+    }
+    #r1{
+        background-color: rgb(1, 1, 14);
+        color: aliceblue
+    
+    }
+    /* ************************************************* */

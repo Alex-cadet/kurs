@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/weather.css">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
@@ -17,8 +18,8 @@
         <input type="submit" value="Удалить">
         @csrf
     </form>
-    <div class="box">
-    <table class="t1" border=2 align="center">
+    <div class="box_del">
+    <table class="t1_del" border=2 align="center">
         <tr id='r1'>
             <td>id</td>
             <td>Ветер</td>
@@ -82,29 +83,7 @@
     ?>
     </table>
     </div> 
-    <style>
-        .box{
-            margin-top: 50px;
-
-        }
-        .t1{
-            background-color: #86225e;  
-            color: rgb(0, 12, 12);      
-            font-weight: 200;
-            margin-left: 100px;
-
-
-        }
-        .t1 tr{
-            font-weight: bold;
-        }
-        #r1{
-            background-color: rgb(1, 1, 14);
-            color: aliceblue
-        
-        }
-    </style>
-
+    
 @endsection
 </body>
 </html>

@@ -1,5 +1,5 @@
 <button class="custom-btn btn-1" onclick="window.location.href='/'">Домой</button>
-<div class="crud">        
+<div class="crud1">        
      <div class="button">         
          <button id=b1 onclick="window.location.href='create'">Create</button>
      </div>
@@ -20,7 +20,7 @@
         display: inline-block; /*располагаем блоки в ряд по горизонтали*/
         margin-right: 1.25em;
          }
-    .crud{text-align: center;margin-top: 50px; margin: 0 auto;
+    .crud1{text-align: center;margin-top: 50px; margin: 0 auto;
     opacity: .91;}
     .button{display: inline-block; margin-right: 1.25em;}
     #b1{background-color: #008000}

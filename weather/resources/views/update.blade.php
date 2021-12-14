@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/weather.css">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
@@ -25,7 +26,7 @@
             </select>
         </div>
         <label for="" class="region"> значение типа региона на </label>
-        <div class="box">
+        <div class="box_update">
             <select name="type_of_region" id="s2" size=1>
             <?php
             $regions = DB::table('type_of_region')
@@ -84,41 +85,6 @@
     ?>
     </table>
     </div>
-    
-    <style>
-        .box {
-        display: inline-block; /*располагаем блоки в ряд по горизонтали*/
-        margin-right: 0.15em;
-         }
-         .region{
-             margin-top: 20px;
-            background-color: chocolate;
-            font-size: 22px;
-            font-weight: bolder;
-            }
-        #s1,#s2{
-            height: 40px;
-            background-color: rgb(218, 198, 24);
-            font-size: 16px; 
-            font-family: sans-serif; 
-            font-weight: 700; 
-            line-height: 1.3; 
-            padding: .6em 1.4em .5em .8em; width: 100%; 
-            max-width: 100%; 
-            box-sizing: border-box; 
-            margin: 0; 
-            border: 1px solid #aaa;
-             box-shadow: 0 1px 0 1px rgba(0,0,0,.04); 
-            border-radius: .5em;
-             -moz-appearance: none;
-             -webkit-appearance: none;
-             appearance: none;
-            background-repeat: no-repeat, repeat;
-            background-position: right .7em top 50%, 0 0;
-            background-size: .65em auto, 100%; 
-        }        
-        
-    </style>
 @endsection 
 </body>
 </html>

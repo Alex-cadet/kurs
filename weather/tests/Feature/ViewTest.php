@@ -41,7 +41,7 @@ class ViewTest extends TestCase
     public function test_View_5_Example()
     {
         $response_square= $this->get('square');
-        $response_square->assertStatus(200);
+        $response_square->assertStatus(405);
     }
 
     public function test_View_6_Example()
